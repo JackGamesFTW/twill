@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueJsonToCsv from 'vue-json-to-csv'
 import { mapState, mapGetters } from 'vuex'
 import store from '@/store'
 import { FORM } from '@/store/mutations'
@@ -61,6 +62,7 @@ import BlockMixin from '@/mixins/block'
 // configuration
 Vue.use(A17Config)
 Vue.use(A17Notif)
+Vue.use(VueJsonToCsv);
 
 store.registerModule('form', form)
 store.registerModule('publication', publication)
