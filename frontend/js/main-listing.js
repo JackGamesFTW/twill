@@ -39,7 +39,6 @@ import { FormatPermalinkMixin } from '@/mixins'
 // configuration
 Vue.use(A17Config)
 Vue.use(A17Notif)
-Vue.use(VueJsonToCsv);
 
 store.registerModule('datatable', datatable)
 store.registerModule('language', language)
