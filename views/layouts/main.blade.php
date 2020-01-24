@@ -5,8 +5,8 @@
     </head>
     <body class="env env--{{ app()->environment() }} @yield('appTypeClass')">
         <div class="svg-sprite">
-            {{ asset('/assets/admin/icons/icons.svg')  }}
-            {{ asset('/assets/admin/icons/icons-files.svg') }}
+            {!! asset('/img/icons/icons.svg') !!}
+            {!! asset('/img/icons/icons-files.svg') !!}
         </div>
         @if(config('twill.enabled.search', false))
             @partialView(($moduleName ?? null), 'navigation._overlay_navigation', ['search' => true])
