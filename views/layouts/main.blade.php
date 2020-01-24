@@ -5,8 +5,8 @@
     </head>
     <body class="env env--{{ app()->environment() }} @yield('appTypeClass')">
         <div class="svg-sprite">
-            {!! File::exists(public_path("/assets/admin/icons/icons.svg")) ? File::get(public_path("/assets/admin/icons/icons.svg")) : '' !!}
-            {!! File::exists(public_path("/assets/admin/icons/icons-files.svg")) ? File::get(public_path("/assets/admin/icons/icons-files.svg")) : '' !!}
+            {!! asset('/img/icons/icons.svg') !!}
+            {!! asset('/img/icons/icons-files.svg') !!}
         </div>
         @if(config('twill.enabled.search', false))
             @partialView(($moduleName ?? null), 'navigation._overlay_navigation', ['search' => true])
